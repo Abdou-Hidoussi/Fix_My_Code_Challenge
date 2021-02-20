@@ -3,11 +3,9 @@
 
 class Square():
     """ Task 1 """
-    width = 0
-    height = 0
-
     def __init__(self, *args, **kwargs):
         """ Task 1 """
+        self.width = 0
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -17,15 +15,15 @@ class Square():
 
     def permiterOfMySquare(self):
         """ Task 1 """
-        return (self.width * 2) + (self.height * 2)
+        return (self.width * 4)
 
     def __str__(self):
         """ Task 1 """
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.width, self.width)
 
 if __name__ == "__main__":
     """ Task 1 """
-    s = Square(width=12, height=9)
+    s = Square(width=10, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.permiterOfMySquare())
